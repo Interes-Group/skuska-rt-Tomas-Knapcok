@@ -14,7 +14,7 @@ public class Tree extends Rectangle {
 
     public void drawTree(Graphics g){
         g.setColor(color);
-        g.fillOval(this.x,this.y,this.width,2*this.height/3);
-        g.fillRect(this.x+this.width/3,this.y+this.height/3,width/3,2*height/3);
+        g.fillOval(this.x,this.y,this.width,2*this.height/5);
+        g.fillRect(this.x+this.width/3,this.y+this.height/3,width/3,2*height/6);
     }
 }
