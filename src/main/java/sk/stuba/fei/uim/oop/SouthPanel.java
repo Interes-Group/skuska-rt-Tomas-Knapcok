@@ -41,14 +41,18 @@ public class SouthPanel extends JPanel implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == tree){
+            paper.setMoveStatus(false);
             paper.setDrawShape(true);
             text.setText("KRESLENIE");
         }
         if (e.getSource() == move){
+            paper.setDrawShape(false);
             paper.setMoveStatus(true);
             text.setText("PRESUVANIE");
         }
         if (e.getSource() == nextColor){
+            paper.setDrawShape(false);
+            paper.setMoveStatus(false);
             paper.setColor(colors[i]);
             text.setBackground(colors[i]);
             i++;

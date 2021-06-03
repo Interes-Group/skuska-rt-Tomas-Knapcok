@@ -58,16 +58,17 @@ public class CanvasPaper extends JPanel implements MouseListener, MouseMotionLis
             currentTree = new Tree(posX, posY, 1,1,color);
 
         if (moveStatus){
-            if (trees != null){
+            if (!trees.isEmpty()){
                 for (Tree temp : trees){
                     if (temp.contains(posX, posY)){
                         currentTree = temp;
                         trees.remove(temp);
-                        System.out.println("si na strome");
+                        break;
                     }
                     else
                         System.out.println("nesi na strome");
                 }
+
             }
 
         }
@@ -83,8 +84,6 @@ public class CanvasPaper extends JPanel implements MouseListener, MouseMotionLis
         }
         repaint();
         currentTree = null;
-        drawShape = false;
-        moveStatus = false;
     }
 
     @Override
