@@ -12,13 +12,13 @@ import java.util.ArrayList;
 @Data
 public class CanvasPaper extends JPanel implements MouseListener, MouseMotionListener {
 
-    public ArrayList<Tree> trees = new ArrayList<>();
-    Tree currentTree;
-    int posX = 0;
-    int posY = 0;
-    boolean moveStatus;
-    boolean drawShape;
-    Color color;
+    private ArrayList<Tree> trees = new ArrayList<>();
+    private Tree currentTree;
+    private int posX = 0;
+    private int posY = 0;
+    private boolean moveStatus;
+    private boolean drawShape;
+    private Color color;
 
     public CanvasPaper() {
         super();
